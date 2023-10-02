@@ -1,0 +1,27 @@
+@import url('navbar.css');
+
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+}
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: #fac0ac; */
+}
+
+body{
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+main{
+  margin-top: 5rem;
+}
