@@ -16,6 +16,11 @@ header{
 .logo{
   margin-right: auto;
   font-size: 25px;
+  transition: all 0.3s ease 0s;
+  color: #272739;
+
+}
+.logo:hover{
   color: #c77357;
 }
 .nav_links{
@@ -28,8 +33,9 @@ header{
 
 .nav_links li .link{
   transition: all 0.3s ease 0s;
+  color: #272739;
 }
 
 .nav_links li .link:hover{
-  color:blue;
+  color: #c77357;
 }
