@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{.Title}}</title>
-    <style></style>
-    <link rel="stylesheet" href="static/styles/style.css" />
-    <script src="https://unpkg.com/htmx.org@2.0.0/dist/htmx.min.js"></script>
+    <title>{{ .Title }} | Fluff-Mallows</title>
+    <link rel="stylesheet" href="static/css/home.css" />
+
+    <link rel="icon" type="image/x-icon" href="static/assets/stick.png">
     <script type="importmap">
       {
         "imports": {
@@ -15,15 +15,13 @@
         }
       }
     </script>
-
   </head>
   <body>
-    <div class="container">
-      <div class="hero">
-        <h1>{{.Title}}</h1>
-        <p class="description">{{.Description}}</p>
-      </div>
-    </div>
-    <script type="module" src="static/scripts/main.js"></script>
+    {{ template "nav" . }}
+
+    <main>{{ template "content" . }}</main>
+
+    {{ template "footer" . }}
+
   </body>
 </html>

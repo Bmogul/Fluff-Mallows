@@ -1,0 +1,40 @@
+{{ define "content" }}
+<div class="hero" id="home">
+
+  <div class="hero-content">
+  <div class="logo-container">
+    <!-- Logo SVG -->
+      <img src="static/assets/logo.png" height="250px;">
+  </div>
+  <p class="tagline">Handcrafted Gourmet Marshmallows</p>
+  <button class="cta-button">Shop Now</button>
+  </div>
+
+  <div id="three-container"></div>
+</div>
+
+
+<section class="section" id="about">
+  <h2 class="section-title">Why Choose Fluff-Mallows?</h2>
+  <div class="features-grid">
+    {{ range .Features }}
+    <div class="feature-card">
+      <div class="feature-icon">{{ .Icon }}</div>
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Description }}</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section" id="products">
+    <h2 class="section-title">Our Signature Flavors</h2>
+    <div class="products-grid">
+        {{ range .Products }}
+            {{ template "product-card" . }}
+        {{ end }}
+    </div>
+</section>
+
+    <script type="module" src="static/scripts/home.js"></script>
+{{ end }}

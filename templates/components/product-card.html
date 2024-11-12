@@ -1,0 +1,13 @@
+{{ define "product-card" }}
+<div class="product-card">
+    <div class="product-image">
+
+      <img src="static/assets/stick.png" height="60px;">
+    </div>
+    <div class="product-info">
+        <h3 class="product-title">{{ .Title }}</h3>
+        <p>{{ .Description }}</p>
+        <p class="product-price">${{ .Price }}</p>
+    </div>
+</div>
+{{ end }}
