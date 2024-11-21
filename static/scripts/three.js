@@ -216,7 +216,6 @@ function initThreeBackground() {
   campfireGroup.translateX(1.5);
 
   campfireGroup.scale.set(2.4,2,2); // Scale all dimensions by 2
-  campfireGroup.rotation.y = 30
 
   // Smoke particles
   const smokeParticles = [];
