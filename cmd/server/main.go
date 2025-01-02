@@ -13,6 +13,7 @@ func main() {
 	// Register routes
 	http.HandleFunc("/", handlers.HomeHandler)
 
+  http.HandleFunc("/products", handlers.ProductPageHandler)
   http.HandleFunc("/3d", handlers.ThreeHandler)
   //
 
