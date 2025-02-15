@@ -1,0 +1,14 @@
+{{ define "content" }}
+
+
+<section class="section productsSec" id="products">
+    <h2 class="section-title">Our Product Line</h2>
+    <div class="products-grid">
+        {{ range .Products }}
+            {{ template "product-card" . }}
+        {{ end }}
+    </div>
+</section>
+
+    <script type="module" src="static/scripts/home.js"></script>
+{{ end }}

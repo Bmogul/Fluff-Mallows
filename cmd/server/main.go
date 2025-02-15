@@ -5,6 +5,8 @@ import "net/http"
 import "log"
 import "fluff-mallows/internal/handlers"
 
+
+
 func main() {
 	// Initialize the home handler
 	fs := http.FileServer(http.Dir("static"))
@@ -13,6 +15,7 @@ func main() {
 	// Register routes
 	http.HandleFunc("/", handlers.HomeHandler)
 
+  http.HandleFunc("/products", handlers.ProductPageHandler)
   http.HandleFunc("/3d", handlers.ThreeHandler)
   //
 
