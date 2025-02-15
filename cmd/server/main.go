@@ -5,6 +5,8 @@ import "net/http"
 import "log"
 import "fluff-mallows/internal/handlers"
 
+
+
 func main() {
 	// Initialize the home handler
 	fs := http.FileServer(http.Dir("static"))

@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"html/template"
 	"net/http"
   "fmt"
 )
@@ -24,13 +23,10 @@ type PageData struct {
 	Features []Feature
 }
 
-func parseTemplates() (*template.Template, error) {
-	// Parse all templates
-	return template.ParseGlob("templates/**/*.html")
-}
+
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := parseTemplates()
+	tmpl, err := parseTemplates("home.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

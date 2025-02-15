@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"html/template"
 	"net/http"
 )
 
@@ -16,8 +15,9 @@ type PageDataP struct {
 	Products []Products
 }
 
+
 func ProductPageHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("templates/components/nav.html", "templates/layouts/informational.html", "templates/pages/products.html", "templates/components/footer.html", "templates/components/product-card.html")
+	tmpl, err := parseTemplates("products.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

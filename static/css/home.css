@@ -182,6 +182,7 @@ nav {
   margin-bottom: 1rem;
 }
 
+
 /* Products Grid */
 .products-grid {
   display: grid;
@@ -266,4 +267,20 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   animation: float 2s ease-in-out infinite;
+}
+
+/*PRODUCTS PAGE*/
+#about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.productsSec{
+  margin: 5rem 1rem;
+}
+.dsc{
+  margin: 40px;
+  font-size: 25px;
+  width: 65%;
 }
